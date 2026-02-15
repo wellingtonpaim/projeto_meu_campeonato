@@ -1,0 +1,131 @@
+{
+    "info": {
+        "name": "Meu Campeonato API",
+        "description": "Collection completa para testar os endpoints do simulador de campeonatos de várzea.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "1. Criar Campeonato",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"Copa do Bairro 2026\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/championships",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "championships"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "2. Inscrever Time",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"Flamengo\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/championships/1/enroll",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "championships",
+                        "1",
+                        "enroll"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "3. Simular Campeonato",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8080/api/championships/1/simulate",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "championships",
+                        "1",
+                        "simulate"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "4. Histórico de Campeonatos",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:8080/api/championships",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "championships"
+                    ]
+                }
+            }
+        }
+    ]
+}
