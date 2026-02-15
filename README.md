@@ -92,4 +92,15 @@ Lista todos os campeonatos passados ordenados do mais recente para o mais antigo
 
 ---
 
-Desenvolvido com dedicação e boas práticas para o desafio técnico.
+## 🧪 Testes Automatizados
+
+O projeto conta com uma suíte de testes que cobre tanto a lógica de negócio quanto a integridade dos dados, utilizando **PHPUnit**.
+
+### Cobertura de Testes:
+- **Feature Tests:** Validação de regras de negócio (limite de 8 times, fluxo de inscrição e persistência).
+- **Unit Tests:** Validação de lógica pura e contratos de dados (processamento de JSON e cálculos matemáticos).
+
+Para rodar os testes, utilize o comando:
+
+./vendor/bin/sail artisan test
+
