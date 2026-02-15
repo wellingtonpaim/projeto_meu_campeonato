@@ -1,6 +1,6 @@
 # 🏆 API Meu Campeonato (Simulador de Várzea)
 
-Uma API RESTful desenvolvida como solução para o desafio técnico de simulação de campeonatos de futebol. A aplicação permite a criação de torneios de 8 times, inscrição controlada de participantes, chaveamento automático (Quartas, Semis, Terceiro Lugar e Final) e integração com um script externo em Python para simulação de resultados.
+Uma API RESTful desenvolvida como solução para um desafio técnico de simulação de campeonatos de futebol. A aplicação permite a criação de torneios de 8 times, inscrição controlada de participantes, chaveamento automático (Quartas de final, Semifinais, Terceiro Lugar e Final) e integração com um script externo em Python para simulação de resultados.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -70,7 +70,7 @@ Caso prefira rodar os comandos individualmente para entender o processo de provi
 
 ## 📡 Endpoints da API
 
-A aplicação roda por padrão na porta 80 ou 8080 (dependendo da sua configuração do Docker, verifique no arquivo .env a variável APP_PORT).
+A aplicação roda por padrão na porta 8080 (dependendo da sua configuração do Docker, verifique no arquivo .env a variável APP_PORT).
 
 ### 1. Criar um Campeonato
 Cria a estrutura inicial do torneio.
