@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\ChampionshipService;
+use App\Services\SimulationService;
 use Illuminate\Http\Request;
 
 class ChampionshipController
@@ -29,6 +30,20 @@ class ChampionshipController
             return response()->json([
                 'message' => 'Time inscrito com sucesso',
                 'team' => $team
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 422);
+        }
+    }
+
+    public function simulate($id, SimulationService $simulationService)
+    {
+        try {
+            $championship = $simulationService->simulate($id);
+
+            return response()->json([
+                'message' => 'Campeonato simulado com sucesso!',
+                'championship' => $championship
             ], 200);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 422);

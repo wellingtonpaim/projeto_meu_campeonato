@@ -15,10 +15,6 @@ def simulate_match():
     team_a_penalties = random.randint(3, 5)
     team_b_penalties = random.randint(3, 5)
 
-    # Garantia de que, se for pros pênaltis, não termine empatado
-    while team_a_penalties == team_b_penalties:
-        team_b_penalties = random.randint(3, 6)
-
     result = {
         "team_a": {
             "goals": team_a_goals,

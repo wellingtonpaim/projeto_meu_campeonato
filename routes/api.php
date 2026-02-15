@@ -10,3 +10,4 @@ Route::get('/user', function (Request $request) {
 
 Route::post('/championships', [ChampionshipController::class, 'store']);
 Route::post('/championships/{id}/enroll', [ChampionshipController::class, 'enroll']);
+Route::post('/championships/{id}/simulate', [ChampionshipController::class, 'simulate']);
