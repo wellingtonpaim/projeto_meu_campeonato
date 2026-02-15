@@ -30,7 +30,7 @@ class ChampionshipController
             return response()->json([
                 'message' => 'Time inscrito com sucesso',
                 'team' => $team
-            ], 200);
+            ], 201);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 422);
         }
