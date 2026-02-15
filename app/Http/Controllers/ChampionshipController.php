@@ -49,4 +49,13 @@ class ChampionshipController
             return response()->json(['error' => $e->getMessage()], 422);
         }
     }
+
+    public function index()
+    {
+        $championships = \App\Models\Championship::with('winner')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return response()->json($championships, 200);
+    }
 }
